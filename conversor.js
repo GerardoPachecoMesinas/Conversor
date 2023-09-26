@@ -1,28 +1,38 @@
-function cmToIn(cm) {
-    let resultInch;
-    resultInch = cm / 2.54;
+function cmToIn() {
+    cm = cm.value
+    let resultInch = cm / 2.54;
     pResult.innerHTML = `${cm} centimetros equivalen a ${resultInch} pulgadas`;
 }
 
-function inToCm(inch) {
-    let resultCm;
-    resultCm = inch * 2.54;
+function inToCm() {
+    inch = inch.value
+    let resultCm = inch * 2.54;
     pResult.innerHTML = `${inch} pulgadas equivalen a ${resultCm} centimetros`;
 }
 
-const cm = Number(document.querySelector('#cm'));
-const inch = Number(document.querySelector('#in'));
-const buttom = document.querySelector('#buttom');
+function print() {
+    if (cm.value) {
+        cmToIn();
+        return
+    } else if (inch.value) {
+        inToCm();
+        return
+    } else {
+        alert("ingresa un valor")
+    }
+}
+
+let cm = document.querySelector('#input1');
+let inch = document.querySelector('#input2');
+const buttom = document.querySelector('#buttom_calcular');
 const pResult = document.querySelector('#pResult');
+
+buttom.addEventListener('click', print)
 
 console.log({
     cm,
     inch,
     buttom,
-    result
+    pResult
     }
 )
-addEventListener.
-addEventListener.
-addEventListener.
-addEventListener.
